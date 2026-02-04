@@ -1,5 +1,6 @@
+import "server-only";
 import puppeteer from "puppeteer-core";
-import chromium from "@sparticuz/chromium";
+import chromium from "@sparticuz/chromium-min";
 
 export async function scrapeWebsite(url: string) {
   const browser = await puppeteer.launch({
@@ -19,14 +20,12 @@ export async function scrapeWebsite(url: string) {
       timeout: 60_000,
     });
 
-    const data = await page.evaluate(() => ({
+    return await page.evaluate(() => ({
       title: document.title,
       h1: Array.from(document.querySelectorAll("h1")).map(
         (el) => el.textContent
       ),
     }));
-
-    return data;
   } finally {
     await browser.close();
   }
