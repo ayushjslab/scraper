@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^143.0.4",
     "next": "16.1.6",
+    "puppeteer-core": "^24.36.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
