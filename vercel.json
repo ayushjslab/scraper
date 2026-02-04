@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "app/api/scrape/route.ts": {
+      "runtime": "nodejs",
+      "maxDuration": 60,
+      "includeFiles": "node_modules/@sparticuz/chromium-min/**"
+    }
+  }
+}
