@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { scrapeWebsite } from "@/lib/scraper";
-
+export const runtime = "nodejs";
 export async function GET(req: Request) {
 
     try {
